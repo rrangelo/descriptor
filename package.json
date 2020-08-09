@@ -1,0 +1,32 @@
+{
+  "name": "@rrangelo/descriptor",
+  "version": "0.0.0",
+  "description": "Prototyper for prototypes",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=text --reporter=lcov mocha"
+  },
+  "keywords": [
+    "prototypes"
+  ],
+  "author": "Ramon Rangel Osorio <ramon.rangel@protonmail.com> (https://ve.linkedin.com/in/rrangelo)",
+  "license": "MPL-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^8.1.1",
+    "nyc": "^15.1.0"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrangelo/descriptor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rrangelo/descriptor/issues"
+  },
+  "homepage": "https://github.com/rrangelo/descriptor#readme"
+}
