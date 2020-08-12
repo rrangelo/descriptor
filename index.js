@@ -1,18 +1,31 @@
-'use stricts'
-const fCreate = require('./lib/create');
-const fMake = require('./lib/make');
+'use strict'
+const cDescribes = require('./lib/describe');
+const uClone = require('./lib/util/clone');
 
 const Descriptor = {
 
-    create: fCreate,
-    make: fMake,
-    all: (prototype) => {
+    describes: ( 
+        name = '',
+        prototype = {} 
+    ) => {
 
-        fCreate(prototype);
-        fMake(prototype);
+        if (typeof name !== 'string' || name === '')
+            throw 'A name must be defined';
+        
+        if (!global.prototypes) 
+            global.prototypes = {};
+
+        name = name.replace(' ', '_');
+        name = name.toLowerCase();
+        
+        prototype = cDescribes(name, prototype);
+
+        prototypes[name] = uClone(prototype);
+        
+        prototypes[name + '_maker'] = uClone(prototype.maker);
 
     }
 
-}
+};
 
 module.exports = Descriptor;

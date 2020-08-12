@@ -1,0 +1,25 @@
+name: Package
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Getting sources
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setting up Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Building package
+        run: npm install
+      - name: Testing package  
+        run: npm test
+        env:
+          SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
