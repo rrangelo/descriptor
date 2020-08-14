@@ -15,9 +15,6 @@ const Descriptor = {
         if (!global.prototypes) 
             global.prototypes = {};
 
-        name = name.replace(' ', '_');
-        name = name.toLowerCase();
-        
         prototype = cDescribes(name, prototype);
 
         prototypes[name] = uClone(prototype);

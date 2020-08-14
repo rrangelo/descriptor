@@ -1,6 +1,6 @@
 {
   "name": "@rrangelo/descriptor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Prototyper for prototypes",
   "main": "index.js",
   "scripts": {

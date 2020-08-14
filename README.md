@@ -50,16 +50,18 @@ let person = {
     }
 };
 
-descriptor.describe('myperson', person);
+descriptor.describe('myPerson', person);
 
-let pepe = prototypes.myperson.create();
+let pepe = prototypes.myPerson.create();
 ```
 
 You also can create an object with the `maker` function, like:
 
 ```
-let pancho = prototypes.myperson.maker().name('Pancho').hasChildren(false).make();
+let pancho = prototypes.myPerson.maker().name('Pancho').hasChildren(false).make();
 ```
+
+_Recommendation: Use a camelCase style for name._
 
 #### Errors
 
